@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE_edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pastelería D'Joseph - Pedido</title>
+    </head>
+    <body>
+        <img src="../assets/img/logo-D-Joseph-1.png" alt="Logo D'Joseph" width="200" height="200">
+        
+        <hr>
+
+        <!--Barra de navegación-->
+        <a href="">Nosotros</a>
+        <a href="">Sucursales</a>
+        <a href="">Promociones</a>
+        <a href="./inventario.html">Sitio para el pastelero</a>
+        <a href="" title="Lupa iconos creados por Ayub Irawan - Flaticon"><img 
+            src="../assets/img/lupa.png" alt="Buscador" width="16"></a>
+        <a href="" title="Usuario iconos creados por Freepik - Flaticon"><img
+            src="../assets/img/usuario-de-perfil.png" alt="Perfil"></a>
+        <a href="" title="Carro iconos creados por uicon - Flaticon"><img
+                src="../assets/img/carro-de-la-carretilla.png" alt="Carrito"></a>
+        
+        <hr>
+
+        <h1>Ordena en línea</h1>
+
+        <hr>
+
+        <form action="pedido.js">
+            <h2>Datos del cliente</h2>
+
+            <label for="nombre">Nombre</label><br>
+            <input type="text" id="nombre" name="nombre">
+
+            <br><br>
+
+            <label for="telefono">Teléfono</label><br>
+            <input type="tel" id="telefono" name="telefono">
+
+            <br><br>
+
+            <label for="email">E-mail</label><br>
+            <input type="email" id="email" name="email">
+
+            <br><br>
+
+            <hr>
+
+            <h2>Elige los productos a comprar</h2>
+
+            <h2>Pasteles</h2>
+            <dl>
+                <dt>Pastel Pingüino - $418.00</dt>
+                <dd><img src="https://cdn.shopify.com/s/files/1/0262/5080/5306/products/497982-1_600x.jpg?v=1618602708"
+                    alt="Pastel Pingüino" width="200"><br>
+                    <a href="">Agregar<img src="../assets/img/carro-de-la-carretilla.png"
+                        alt="Buscador"></a>
+                    <input type="number" id="pinguino-cuantos" name="pinguino-cuantos"><br></dd>
+                <br>
+                <dt>Salón intenso individual - $42.00</dt>
+                <dd><img src="https://cdn.shopify.com/s/files/1/0262/5080/5306/products/27167-1_600x.jpg?v=1618602784"
+                    alt="Salón intenso individual" width="200"><br>
+                    <a href="">Agregar<img src="../assets/img/carro-de-la-carretilla.png"
+                        alt="Buscador"></a>
+                    <input type="number" id="intenso-cuantos" name="intenso-cuantos"><br></dd>
+                <br>
+                <dt>Pastel Durazno - $618.00</dt>
+                <dd><img src="https://cdn.shopify.com/s/files/1/0262/5080/5306/products/497131-1_600x.jpg?v=1618602666"
+                    alt="Pastel Durazno" width="200"><br>
+                    <a href="">Agregar<img src="../assets/img/carro-de-la-carretilla.png"
+                        alt="Buscador"></a>
+                    <input type="number" id="durazno-cuantos" name="durazno-cuantos"><br></dd>
+                <br>
+                <dt>Pastel Baileys - $518.00</dt>
+                <dd><img src="https://cdn.shopify.com/s/files/1/0262/5080/5306/products/497440-1_600x.jpg?v=1620877558"
+                    alt="Pastel Baileys" width="200"><br>
+                    <a href="">Agregar<img src="../assets/img/carro-de-la-carretilla.png"
+                        alt="Buscador"></a>
+                    <input type="number" id="baileys-cuantos" name="baileys-cuantos"><br></dd>
+            </dl>
+
+            <h2>Bebidas</h2>
+            <dl>
+                <dt>Chocolate - $48.00</dt>
+                <dd><img src="https://cdn.shopify.com/s/files/1/0262/5080/5306/products/chocolate-1_600x.jpg?v=1618807049"
+                    alt="Chocolate" width="200"><br>
+                    <a href="">Agregar<img src="../assets/img/carro-de-la-carretilla.png"
+                        alt="Buscador"></a>
+                    <input type="number" id="chocolate-cuantos" name="chocolate-cuantos"><br></dd>
+                <br>
+                <dt>Tisana Relax - $43.00</dt>
+                <dd><img src="https://cdn.shopify.com/s/files/1/0262/5080/5306/products/tisana-relax-1_600x.jpg?v=1618807881"
+                    alt="Tisana Relax" width="200"><br>
+                    <a href="">Agregar<img src="../assets/img/carro-de-la-carretilla.png"
+                        alt="Buscador"></a>
+                    <input type="number" id="tisana-cuantos" name="tisana-cuantos"><br></dd>
+                <br>
+                <dt>Cappuccino - $45.00</dt>
+                <dd><img src="https://cdn.shopify.com/s/files/1/0262/5080/5306/products/cappuccino-1_600x.jpg?v=1618806745"
+                    alt="Cappuccino" width="200"><br>
+                    <a href="">Agregar<img src="../assets/img/carro-de-la-carretilla.png"
+                        alt="Buscador"></a>
+                    <input type="number" id="cappuccino-cuantos" name="cappuccino-cuantos"><br></dd>
+                <br>
+                <dt>Café Americano - $32.00</dt>
+                <dd><img src="https://cdn.shopify.com/s/files/1/0262/5080/5306/products/americano-1_600x.jpg?v=1618806696"
+                    alt="Café Americano" width="200"><br>
+                    <a href="">Agregar<img src="../assets/img/carro-de-la-carretilla.png"
+                        alt="Buscador"></a>
+                    <input type="number" id="americano-cuantos" name="americano-cuantos"><br></dd>
+            </dl>
+            
+            <br>
+
+            <input type="reset">
+            <input type="submit">
+
+            <br>
+        </form>
+
+        <hr>
+
+        <!--Información de la pastelería-->
+        <table>
+            <tr>
+                <th>Sucursal</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Horarios</th>
+                <th>Síguenos</th>
+            </tr>
+            <tr>
+                <td>&emsp; San Luis Potosí &emsp;</td>
+                <td>&emsp; Av. Huasteca 295 Col. Lomas de San Luis Potosí Mpo San Luis
+                    Potosí CP 78210 &emsp;
+                </td>
+                <td>&emsp; 444 833 6496&emsp;</td>
+                <td>&emsp; Lun a Dom de 08:30 a 20:30 h&emsp;</td>
+                <td><img src="../assets/img/facebook.png" alt="Facebook" width="16">
+                    <img src="../assets/img/gorjeo.png" alt="Twitter" width="16">
+                    <img src="../assets/img/youtube.png" alt="Youtube" width="16">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
