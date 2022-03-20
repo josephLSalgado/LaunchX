@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>La pokédex de Joseph</title>
+        <link rel="stylesheet" href="../styles/index.css">
+        <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="../assets/img/pokemon-logo.png" alt="Logo Pokémon" width="250px"> 
+            </div>
+        </header>
+        <section class="buscador">
+            <div>
+                <label for="input_pokemon" class="label_buscar">Nombre o
+                    número</label>
+                <input type="text" name="input_pokemon" id="input_pokemon" 
+                    class="input_buscar" onkeypress="teclaBuscar(event)">
+                <button class="boton_buscar" onclick="buscarPokemon()">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/msoeawqm.json"
+                        trigger="loop"
+                        colors="primary:#000000,secondary:#000000"
+                        style="width:25px;height:25px"
+                        class="centrar_img_buscar">
+                    </lord-icon>
+                </button>
+            </div>
+        </section>
+        <section class="pokedex">
+            <div class="tarjeta_pokemon seccion_pokedex">
+                <span class="apartado" id="nombre_pokemon">&nbsp</span>
+                <span class="tipo_pokemon" id="tipo_pokemon">&nbsp</span>
+                <div class="imagen_pokemon">
+                    <img src="../assets/img/pokeball.png" alt="Pokebola"
+                        id="imagen_pokemon" width="225px">
+                </div>
+                <span class="numero_pokemon" id="numero_pokemon">&nbsp</span>
+            </div>
+            <div class="datos_pokemon seccion_pokedex">
+                <span class="apartado">Estadísticas</span>
+                <div class="estadisticas">
+                    <span class="ancho_estadistica">HP</span>
+                    <span class="ancho_estadistica">Velocidad</span>
+                    <span class="ancho_estadistica valor" id="hp">&nbsp</span>
+                    <span class="ancho_estadistica valor" id="velocidad">&nbsp</span>
+                    <span class="ancho_estadistica">ATQ</span>
+                    <span class="ancho_estadistica">DEF</span>
+                    <span class="ancho_estadistica valor" id="ataque">&nbsp</span>
+                    <span class="ancho_estadistica valor" id="defensa">&nbsp</span>
+                    <span class="ancho_estadistica">ATQ Especial</span>
+                    <span class="ancho_estadistica">DEF Especial</span>
+                    <span class="ancho_estadistica valor" id="ataque_especial">&nbsp</span>
+                    <span class="ancho_estadistica valor" id="defensa_especial">&nbsp</span>
+                </div>
+                <span class="apartado">Movimientos</span>
+                <div class="movimientos">
+                    <span id="movimiento_1">&nbsp</span>
+                    <span id="movimiento_2">&nbsp</span>
+                    <span id="movimiento_3">&nbsp</span>
+                    <span id="movimiento_4">&nbsp</span>
+                </div>
+            </div>
+        </section>
+        <section class="seleccion_pokemon">
+            <div class="seleccion seleccion_atras" id="seleccion_atras"
+                onmouseover="pasarSeleccion(this)" onmouseout="salirSeleccion(this)"
+                onclick="seleccionPokemonAtras()">
+                <span id="pokemon_atras"></span>
+            </div>
+            <div class="seleccion seleccion_adelante" id="seleccion_adelante"
+                onmouseover="pasarSeleccion(this)" onmouseout="salirSeleccion(this)"
+                onclick="seleccionPokemonAdelante()">
+                <span id="pokemon_adelante"></span>
+            </div>
+        </section>
+        <footer>
+            <script src="../js/index.js"></script>
+        </footer>
+    </body>
+</html>
