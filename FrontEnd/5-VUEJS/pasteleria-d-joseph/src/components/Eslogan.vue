@@ -1,5 +1,7 @@
 <template>
-    <h1>Los recuerdos más dulces desde 1996</h1>
+    <div class="eslogan">
+        <h1>Los recuerdos más dulces desde 1996</h1>
+    </div>
 </template>
 
 <script>
