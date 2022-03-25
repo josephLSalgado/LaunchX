@@ -22,6 +22,11 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #151718;
+  background-color: #f6f1e8;
+}
+
+body {
+  margin: 0;
 }
 
 nav {
@@ -38,7 +43,7 @@ nav a.router-link-exact-active {
 }
 
 img.logo {
-  width: 75px;
+  width: 100px;
   margin-left: 10px;
   margin-right: 10px;
 }
