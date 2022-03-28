@@ -3,7 +3,7 @@
         <h2>Pasteles</h2>
         <ul class="imagen detalles">
             <!-- Renderizado de una lista con un objeto-->
-            <li v-for="(producto, key, index) in $store.getters.obtenerProductos"
+            <li v-for="(producto, key, index) in $store.getters.obtenerPasteles"
                 v-bind:key="index">
                 <img v-bind:src="producto.foto" v-bind:alt="producto.nombre">
                 <p>{{ producto.nombre }}</p>
