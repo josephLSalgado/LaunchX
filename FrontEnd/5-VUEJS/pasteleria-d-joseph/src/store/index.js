@@ -28,6 +28,28 @@ export default createStore({
           foto: 'https://cdn.shopify.com/s/files/1/0262/5080/5306/products/497440-1_600x.jpg?v=1620877558',
           precio: '$518.00'
         }
+      },
+      bebidas: {
+        0: {
+          nombre: 'Chocolate',
+          foto: 'https://cdn.shopify.com/s/files/1/0262/5080/5306/products/chocolate-1_600x.jpg?v=1618807049',
+          precio: '$48.00'
+        },
+        1: {
+          nombre: 'Tisana Relax',
+          foto: 'https://cdn.shopify.com/s/files/1/0262/5080/5306/products/tisana-relax-1_600x.jpg?v=1618807881',
+          precio: '$43.00'
+        },
+        2: {
+          nombre: 'Cappuccino',
+          foto: 'https://cdn.shopify.com/s/files/1/0262/5080/5306/products/cappuccino-1_600x.jpg?v=1618806745',
+          precio: '$45.00'
+        },
+        3: {
+          nombre: 'Café Americano',
+          foto: 'https://cdn.shopify.com/s/files/1/0262/5080/5306/products/americano-1_600x.jpg?v=1618806696',
+          precio: '$32.00'
+        }
       }
     }
   },
@@ -46,6 +68,9 @@ export default createStore({
     },
     obtenerPasteles(state) {
       return state.productos.pasteles;
+    },
+    obtenerBebidas(state) {
+      return state.productos.bebidas;
     }
   },
   mutations: {
