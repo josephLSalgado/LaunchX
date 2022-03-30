@@ -50,6 +50,33 @@ export default createStore({
           foto: 'https://cdn.shopify.com/s/files/1/0262/5080/5306/products/americano-1_600x.jpg?v=1618806696',
           precio: '$32.00'
         }
+      },
+      sabores: {
+        0: {
+          nombre: 'Vainilla',
+          foto: require('@/assets/vainilla.jpg'),
+          precio: '$50.00'
+        },
+        1: {
+          nombre: 'Nuez',
+          foto: require('@/assets/nuez.jpg'),
+          precio: '$45.00'
+        },
+        2: {
+          nombre: 'Chocolate',
+          foto: require('@/assets/chocolate.jpg'),
+          precio: '$38.00'
+        },
+        3: {
+          nombre: 'Almendra',
+          foto: require('@/assets/almendra.jpg'),
+          precio: '$65.00'
+        },
+        4: {
+          nombre: 'Rompope',
+          foto: require('@/assets/rompope.jpg'),
+          precio: '$32.00'
+        }
       }
     }
   },
@@ -71,6 +98,9 @@ export default createStore({
     },
     obtenerBebidas(state) {
       return state.productos.bebidas;
+    },
+    obtenerSabores(state) {
+      return state.productos.sabores;
     }
   },
   mutations: {
