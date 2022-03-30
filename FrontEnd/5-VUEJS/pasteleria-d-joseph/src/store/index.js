@@ -77,6 +77,33 @@ export default createStore({
           foto: require('@/assets/rompope.jpg'),
           precio: '$32.00'
         }
+      },
+      adornos: {
+        0: {
+          nombre: 'Cumpleaños',
+          foto: require('@/assets/birthday.jpg'),
+          precio: '$19.00'
+        },
+        1: {
+          nombre: 'Chantilly',
+          foto: require('@/assets/chantilly.jpg'),
+          precio: '$32.00'
+        },
+        2: {
+          nombre: 'Chocolate',
+          foto: require('@/assets/choco-adorno.jpg'),
+          precio: '$39.00'
+        },
+        3: {
+          nombre: 'Navideño',
+          foto: require('@/assets/navideño.jpg'),
+          precio: '$25.00'
+        },
+        4: {
+          nombre: 'Boda',
+          foto: require('@/assets/boda.jpg'),
+          precio: '$25.00'
+        }
       }
     }
   },
@@ -101,6 +128,9 @@ export default createStore({
     },
     obtenerSabores(state) {
       return state.productos.sabores;
+    },
+    obtenerAdornos(state) {
+      return state.productos.adornos;
     }
   },
   mutations: {
