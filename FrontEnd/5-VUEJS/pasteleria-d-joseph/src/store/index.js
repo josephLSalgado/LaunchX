@@ -105,6 +105,27 @@ export default createStore({
           precio: '$25.00'
         }
       }
+    },
+    cliente: [],
+    pedido: {
+      pasteles: {
+        0: {
+          nombre: 'Pastel Pingüino',
+          cantidad: 0
+        },
+        1: {
+          nombre: 'Salón intenso individual',
+          cantidad: 0
+        },
+        2: {
+          nombre: 'Pastel Durazno',
+          cantidad: 0
+        },
+        3: {
+          nombre: 'Pastel Baileys',
+          cantidad: 0
+        }
+      }
     }
   },
   getters: {
@@ -134,9 +155,74 @@ export default createStore({
     }
   },
   mutations: {
+    agregarCantidad(state, index) {
+      state.pedido.pasteles[index].cantidad++;
+    },
+    eliminarCantidad(state, index) {
+      if (state.pedido.pasteles[index].cantidad != 0) {
+        state.pedido.pasteles[index].cantidad--;
+      }
+    },
+    ordenarPedido(state) {
+      let _nombre = document.getElementById("nombre").value;
+      let _telefono = document.getElementById("telefono").value;
+      let _correo = document.getElementById("correo").value;
+      let pedido = 0;
+
+      if (estaVacia(_nombre) || estaVacia(_telefono) || estaVacia(_correo)) {
+        alert("Llena los campos");
+      } else {
+        for(let i = 0; i < 4; i++) {
+          if (state.pedido.pasteles[i].cantidad == 0) {
+            pedido++;
+          }
+        }
+
+        if(pedido < 4) {
+          let nuevoPedido = [{
+            nombre: _nombre,
+            telefono: _telefono,
+            email: _correo,
+            orden: {
+              pasteles: {
+                0: {
+                  nombre: 'Pastel Pingüino',
+                  cantidad: state.pedido.pasteles[0].cantidad
+                },
+                1: {
+                  nombre: 'Salón intenso individual',
+                  cantidad: state.pedido.pasteles[1].cantidad
+                },
+                2: {
+                  nombre: 'Pastel Durazno',
+                  cantidad: state.pedido.pasteles[2].cantidad
+                },
+                3: {
+                  nombre: 'Pastel Baileys',
+                  cantidad: state.pedido.pasteles[3].cantidad
+                }
+              }
+            }
+          }];
+
+          state.cliente.push(nuevoPedido);
+
+          for (let i = 0; i < 4; i++) {
+            state.pedido.pasteles[i].cantidad = 0;
+          }
+        } else {
+          alert("¡No has ordenado nada! :(");
+        }
+      }
+    }
   },
   actions: {
   },
   modules: {
   }
 })
+
+// Función que ayuda a saber si la cadena no está vacía o solo tienes espacios
+function estaVacia(str) {
+  return !str.trim().length;
+}
