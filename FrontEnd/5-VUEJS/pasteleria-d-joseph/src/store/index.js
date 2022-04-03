@@ -152,6 +152,9 @@ export default createStore({
     },
     obtenerAdornos(state) {
       return state.productos.adornos;
+    },
+    obtenerPedidos(state) {
+      return state.cliente;
     }
   },
   mutations: {
@@ -179,7 +182,7 @@ export default createStore({
         }
 
         if(pedido < 4) {
-          let nuevoPedido = [{
+          let nuevoPedido = {
             nombre: _nombre,
             telefono: _telefono,
             email: _correo,
@@ -203,7 +206,7 @@ export default createStore({
                 }
               }
             }
-          }];
+          };
 
           state.cliente.push(nuevoPedido);
 
