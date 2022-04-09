@@ -59,5 +59,5 @@ public class Bicicleta {
                 "color: " + color;
     }
 
-    // *Bajo acoplamiento, alta coerción*
+    // *Bajo acoplamiento, alta cohesión*
 }
