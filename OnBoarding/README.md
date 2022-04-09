@@ -1,7 +1,5 @@
 # 🐍 Curso Introductorio de Python
 
-![onboarding](https://user-images.githubusercontent.com/49181840/161889590-d147b03c-c901-48fd-bf2e-fad0926ad63f.png)
-
 Actividades relacionadas al Curso Introductorio de Python para LaunchX - 
 Innovacción Virtual.
 
