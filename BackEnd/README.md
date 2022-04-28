@@ -115,6 +115,15 @@ Interface.
 
 ### Input/Output - Sockets
 
+## 📖 Semana 3
+
+[Prácticas](https://github.com/josephLSalgado/BackEndJava)
+
+- Modelado - practicaHarry
+
+- Herencia y polimorfismo - practicaMona
+
+
 ## 🔗 Más información
 
 [Misión BackEnd](https://github.com/LaunchX-InnovaccionVirtual/MissionJAVA)
