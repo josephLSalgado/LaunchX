@@ -76,6 +76,45 @@ _COMPOSICIÓN_ (permanente). "CONTIENE UN".
 - **Real** - Redifinir métodos
 - **Genérico** - Clases genéricas
 
+## 📖 Semana 2
+
+### Interfaces
+
+**Abstracción** - Proceso de ocultar detalles, de IMPLEMENTACIÓN (cómo lo hace)
+
+_Abstracción funcional_ - lo que hace
+
+lo que hace 0 - 100% _abstract_ class (extends)
+
+"" 100% _interface_ (implements)
+
+### Thread & Runnable (Hilos)
+
+Un hilo tiene 5 estados.
+
+**Clase Thread**
+
+- New
+- Runnable
+- Running - ThreadScheduler
+- Non-Runnable - Blocked
+- Terminated
+
+La clase ``Thread`` extiende de la clase ``Object`` e implementa la clase
+``Runnable``.
+
+**Clase Runnable** 
+
+Interface.
+
+```
+    public void run();
+```
+
+-> Lo que queremos que haga
+
+### Input/Output - Sockets
+
 ## 🔗 Más información
 
 [Misión BackEnd](https://github.com/LaunchX-InnovaccionVirtual/MissionJAVA)
