@@ -123,6 +123,119 @@ Interface.
 
 - Herencia y polimorfismo - practicaMona
 
+## 📖 Semana 4
+
+### Crear y ejecutar un contenedor Docker
+
+- Traer imagen de `MySQL`
+
+```
+    docker pull mysql/mysql-server:latest
+```
+
+- Verificar imagenes
+
+```
+    docker images
+```
+
+- Crear un contenedor
+
+```
+    docker run --name=mySQLContainerInstance -p 3306:3306 -d mysql/mysql-server:latest
+```
+
+- Verificar que el contenedor se esté ejecutando
+
+```
+    docker ps
+```
+
+- Ejecutar el siguiente comando para buscar la contraseña que se generó
+automáticamente
+
+```
+    docker logs mySQLContainerInstance
+```
+
+- Ejecutar contenedor
+
+```
+    docker exec -it mySQLContainerInstance mysql -uroot -p
+```
+
+### Crear una base de datos con MySQL
+
+- Modificar la contraseña por una más sencilla, en este caso se utilizó
+`password`.
+
+```
+    ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
+```
+
+- Crear una base de datos
+
+```
+    CREATE DATABASE myJavaDB;
+```
+
+- Usar dicha base de datos
+
+```
+    USE myJavaDB;
+```
+
+- Mostrar todas las bases de datos existentes
+
+```
+    SHOW DATABASES;
+```
+
+- Crear una tabla
+
+```
+    CREATE Table DeptosDalia(idDepto INT NOT NULL, nameDepto varchar(80) NOT 
+    NULL, PRIMARY KEY (idDepto));
+```
+
+**PRIMARY KEY** -> identificador único
+
+**Llaves primarias y llaves foráneas** -> enlazar una tabla con otra
+
+- Mostrar las tablas existentes
+
+```
+    SHOW TABLES;
+```
+
+- Agregar filas a la tabla
+
+```
+    INSERT INTO DeptosDalia VALUES
+    -> (1,'TI'), (2,'News and Media'), (3,'Producto'), (4,'Marketing'),
+       (5,'Ventas B2C'), (6,'Ventas B2B'), (7,'Academy'), (8,'Community');
+```
+
+- Mostrar columnas de la tabla
+
+```
+    SHOW COLUMNS FROM DeptosDalia;
+```
+
+- Ver TODOS los registros de la tabla
+
+```
+    SELECT * FROM DeptosDalia;
+```
+
+- Crear una tabla que contiene una llave foránea que hace referencia a otra
+tabla
+
+```
+    CREATE TABLE EmpleadosDalia (idEmp INT NOT NULL, nameEmp varchar(80) NOT
+    NULL, idDepto INT NOT NULL, PRIMARY KEY (idEmp), FOREIGN KEY (idDepto)
+    REFERENCES DeptosDalia (idDepto))ENGINE=INNODB;
+```
 
 ## 🔗 Más información
 
