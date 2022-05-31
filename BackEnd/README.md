@@ -123,6 +123,10 @@ Interface.
 
 - Herencia y polimorfismo - practicaMona
 
+- Interfaces - practicaMultiverse
+
+- Hilos - practicaComic
+
 ## 📖 Semana 4
 
 ### Crear y ejecutar un contenedor Docker
@@ -236,6 +240,76 @@ tabla
     NULL, idDepto INT NOT NULL, PRIMARY KEY (idEmp), FOREIGN KEY (idDepto)
     REFERENCES DeptosDalia (idDepto))ENGINE=INNODB;
 ```
+
+## 📖 Semana 5
+
+### Contenerizar una aplicación de Java
+
+Crear un nuevo documento en la raíz del proyecto llamado ``Dockerfile``, y 
+escribir en él lo siguiente:
+
+```
+    # Utilizamos el OpenJDK como imagen base de mi proyecto
+    FROM openjdk:18
+
+    # Creamos un nuevo folder para los archivos de mi aplicación que estarán
+    # contenidos en mi contenedor.
+    RUN mkdir /app
+
+    # Copiamos los archivos del host al contenedor
+    COPY out/production/DockerKata/ /app
+
+    # 'RUN' todo lo que tiene que ver con docker y 'COPY' con lo que haga la 
+    # máquina
+
+    # Asignamos el directorio para ejecuciones futuras de comandos
+    WORKDIR /app
+
+    # Ejecutamos la clase Main
+    CMD java Main
+```
+
+En la terminal de **IntelliJ IDEA**, etiquetar la imagen, cómo se llamará, la
+versión actual y la carpeta donde se está trabajando
+
+```
+    docker build -t launchx-docker:1.0 .
+```
+
+Ejecutar imagen
+
+```
+    docker run launchx-docker:1.0
+```
+
+Opcional, subir el contenedor a un **App Service**, **Container Instance**,
+etc.
+
+[Docker Kata](./DockerKata/)
+
+### JPA
+
+En la base de datos de MySQL crear un usuario con el nombre de ``user`` para
+poder acceder a esta base de datos
+
+```
+    CREATE USER 'user'@'%' IDENTIFIED BY 'password';
+```
+
+Dar privilegios
+
+```
+    GRANT ALL PRIVILEGES ON * . * TO 'user'@'%';
+    FLUSH PRIVILEGES;
+```
+
+Agregar la base de datos en la app de Java desde una URL
+
+```
+    jdbc:mysql://localhost:3306/launchxDB
+```
+
+``launchxDB`` es el nombre de la base de datos de MySQL.
 
 ## 🔗 Más información
 
