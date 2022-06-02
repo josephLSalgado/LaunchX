@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="holaWebApp:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>holaWebApp</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="holaWebApp-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="holaWebApp:war exploded" />
+    </root>
+  </artifact>
+</component>
