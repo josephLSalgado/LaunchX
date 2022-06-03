@@ -311,6 +311,55 @@ Agregar la base de datos en la app de Java desde una URL
 
 ``launchxDB`` es el nombre de la base de datos de MySQL.
 
+## 📖 Semana 6
+
+### Jakarta
+
+Comandos utilizados para contenerizar la WebApp:
+
+```
+    docker pull mysql
+
+    docker run --name app-db -d -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=myDB mysql
+
+    docker exec -it app-db mysql -uroot -p
+
+    docker build -t my-web-app:1.0 .
+
+    docker run --name app -d -p 8080:8080 my-web-app:1.0
+
+```
+
+Crear una red
+
+```
+    docker network create app-network
+
+    docker network ls
+
+    docker network connect app-network app-db
+```
+
+Reconstruye
+
+```
+    docker build -t my-web-app:1.0 .
+
+    docker rm -f app
+
+    docker run --name app -d -p 8080:8080 --network=app-network my-web-app:1.0
+```
+
+Y con un archivo ``yml`` se puede realizar todo lo anterior
+
+```
+    docker-compose up
+```
+
+[holaWebApp](./holaWebApp/)
+
+[WebApp con Jakarta y Docker](https://github.com/LaunchX-InnovaccionVirtual/JakartaDocker)
+
 ## 🔗 Más información
 
 [Misión BackEnd](https://github.com/LaunchX-InnovaccionVirtual/MissionJAVA)
